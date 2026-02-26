@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="resources/css/style.css">
+<title>Nono's Space</title>
+</head>
+
+<body>
+
+<div class="escena" id="escena">
+  <div class="sobre"><div class="tapa"></div></div>
+  <div class="papel">
+    Hola querida Nono 💌 <br><br>
+    Haz clic nuevamente para continuar...
+  </div>
+</div>
+
+<script>
+if(localStorage.getItem("introVista")){
+  document.body.classList.add("fade-out");
+
+  setTimeout(()=>{
+    window.location.href = "inicio.html";
+  }, 10);
+}
+let estado = 0;
+
+document.body.addEventListener("click", function(){
+  if(estado === 0){
+    escena.classList.add("abierto");
+    estado = 1;
+  } 
+  else if(estado === 1){
+  localStorage.setItem("introVista","true");
+
+  document.body.classList.add("fade-out");
+
+  setTimeout(()=>{
+    window.location.href = "inicio.html";
+   }, 500);
+  }
+});
+</script>
+
+</body>
+</html>
