@@ -1,7 +1,7 @@
 const imagenes = [
   {
     src:"resources/album/foto1.png",
-    texto:"Un momento muy especial juntos 💗",
+    texto:"Fue un dibujo el cual me gustó mucho hacerlo. Empece a dibujar solamente para poderlo dibujar, realmente le puse ganas, espero que te guste, tan solo es el boceto. Psdt: Está al revez, jaja.",
     fecha:"12 Febrero 2026"
   },
   {
@@ -96,4 +96,5 @@ next.onclick = (e)=>{
 
 lightbox.onclick = cerrar;
 imagenActiva.onclick = e=>e.stopPropagation();
+
 
